@@ -1,15 +1,15 @@
-// But : Écrire un programme pour calculer le montant qu’un individu devra débourser pour faire un voyage dans une
-//       automobile louée.L’algorithme tient compte du kilométrage parcouru et de la durée du voyage qui sont
-//       soumises par le requérant
+// But : Ã‰crire un programme pour calculer le montant quâ€™un individu devra dÃ©bourser pour faire un voyage dans une
+//       automobile louÃ©e.Lâ€™algorithme tient compte du kilomÃ©trage parcouru et de la durÃ©e du voyage qui sont
+//       soumises par le requÃ©rant
 // Auteur : Patrice Dinelle
 // Date : 2020-09-16
 
 /*
-Les différentes sources de dépenses sont :
-o Coût de la location de 45$ par jour et comprend 250 km gratuits par jour.
-o La consommation du véhicule est 7.6 litres aux 100 km.
-o 1 litre d’essence coûte 1.25$
-o 0.05$ du kilomètre est exigé pour chaque kilomètre supplémentaire.
+Les diffÃ©rentes sources de dÃ©penses sont :
+o CoÃ»t de la location de 45$ par jour et comprend 250 km gratuits par jour.
+o La consommation du vÃ©hicule est 7.6 litres aux 100 km.
+o 1 litre dâ€™essence coÃ»te 1.25$
+o 0.05$ du kilomÃ¨tre est exigÃ© pour chaque kilomÃ¨tre supplÃ©mentaire.
 */
 
 
@@ -19,22 +19,24 @@ void main()
 {
 	setlocale(LC_ALL, "");         // pour afficher les accents dans la console
 
-	//varables qui sont entrer par l'utilisateur
+	//FR : varables qui sont entrer par l'utilisateur
 	int jours;
 	float km;
-	//variable utiliser pour arriver au prix final 
+	//FR : variable utiliser pour arriver au prix final 
 	float kmt;
 	float kmprix;
 	float gaz;
 	float prixj ;
 	//demander les question pour les calculs
+	// FR : Ligne suivante
 	std::cout << "Veuiller entrer le nombre de jour que vous avez utiliser la vouture : ";
 	std::cin >> jours;
+	// FR : Ligne suivante
 	std::cout << "veullier entrer le nombre de km que vous avez parcourue : ";
 	std::cin >> km;
 
 
-	if (km / jours > 250) // si le km dépace le nombre donné par jour
+	if (km / jours > 250) // si le km dÃ©pace le nombre donnÃ© par jour
 	{
 		kmt = (km - (250 * jours));// pour savour le nombre de km d'extra
 		kmprix = (kmt* 0.05);	   // prix pour les km de plus
@@ -42,11 +44,11 @@ void main()
 		prixj = jours * 45;				 // prix par jour
 		std::cout << "Le prix total de votre location est : " << prixj + gaz + kmprix << "$"; // afficher le prix final
 	}
-	else    // si les km donner ne sont pas tout utilisé
+	else    // FR : si les km donner ne sont pas tout utilisÃ©
 	{
 		gaz = (((km / 100)*7.6) * 1.25); // prix du gaz
 		prixj = jours * 45;				 // prix par jour
-		std::cout << "Le prix total de votre location est : " << prixj + gaz << "$"; // aficheer le prix final 
+		std::cout << "Le prix total de votre location est : " << prixj + gaz << "$"; // FR : aficheer le prix final 
 	}
 
 }
@@ -58,4 +60,17 @@ nb de jour		nb de km		prix final
 5				500				272.50$
 3				750				206.25$
 7				2100			532$
+*/
+/*
+â€¢	La solution est bien nommÃ©e et comporte un projet 5/ 5
+â€¢	Les fichiers sources contiennent l'identification complÃ¨te du programme et de son auteur	5/5
+â€¢	Le code source est sans erreur de compilation 15/ 15
+â€¢	Le programme est fonctionnel 20/ 20
+â€¢	Le programme passe le plan de tests 20/ 20
+â€¢	Le code source est largement commentÃ© 20 / 20
+â€¢	La solution est dÃ©posÃ©e dans LEA et dans GitHub.L'adresse est envoyÃ©e via Outlook	10/15
+        // KM : Il faut solutionner le problÃ¨me de la compression, je ne veux pas du .rar
+Fautes de franÃ§ais = -5
+Note 90/100
+TrÃ¨s bon travail ! 
 */
